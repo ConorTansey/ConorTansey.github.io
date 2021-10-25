@@ -32,17 +32,17 @@ section{
 } 
 
 .max-width{
-    max-width: 1300px; 
+    max-width: 1500px; 
     padding: 0 80px;
     margin: auto;
 }
 
-.about, .services, .skills, .experience, .contact, .footer{
+.about, .background .skills, .experience, .contact{
     font-family: 'Poppins', sans-serif;
 }
 
 .about .about-content,
-.services .serv-content,
+.background .background-content,
 .skills .skills-content,
 .contact .contact-content
 .experience, .content{
@@ -109,15 +109,7 @@ section .title::after{
     color: #fff;
     font-size: 40px;
     font-weight: 600;
-}
-
-.navbar .logo a span{
-    color: crimson; 
-    transition: all 0.3s ease;
-}
-
-.navbar .sticky .logo a span{
-    color: #fff;
+    
 }
 
 .navbar .menu li {
@@ -130,7 +122,7 @@ section .title::after{
     display: block;
     font-size: 25px;
     font-weight: 500;
-    margin: 20px;
+    margin: 35px;
     transition: color 0.3s ease; 
 }
 
@@ -178,7 +170,7 @@ section .title::after{
 /* Home Section Styling */ 
 .home{
     display: flex;
-    background: url("Web\ Background.JPG") no-repeat center;
+    background: url("Media/Home_Background.JPG") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -297,7 +289,6 @@ section .title::after{
     text-align: center;
     font-size: 40px;
     font-weight: 500;
-
     font-family: 'Ubuntu', sans-serif; 
 }
 
@@ -348,16 +339,16 @@ section .title::after{
 
 
 /* services section styling */
-.services .title{
+.background .title{
     color: black;
 }
 
-.services .title::before 
+.background .title::before 
 {
     background:black;
 }
 
-.services .serv-content .card{
+.background .background-content .card{
     width: 5000px;
     background: white;
     text-align: center;
@@ -371,37 +362,37 @@ section .title::after{
 
 }
 
-.services .title::after{
+.background .title::after{
     content: "my background";
 }
 
-.services .serv-content .card .box{
+.background .background-content .card .box{
     transition: all 0.3s ease;
 }
 
-.services .serv-content .card:hover .box{
+.background .background-content .card:hover .box{
     transform: scale(1.05);
 }
  
-.services .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
 
-}
-
-.services .serv-content .card:hover i{
-    color: #fff;
-}
-
-.services .serv-content .card .text{
+.background .background-content .card .text{
     font-size: 30px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+    font-family: 'Ubuntu', sans-serif;  
 }
 
-.services .serv-content .car
- 
+.background .background-content .card .text{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    font-family: 'Ubuntu', sans-serif;  
+}
+
+.background .background-content .card .course{
+    font-family: 'Ubuntu', sans-serif;  
+}
+
 
 /* skills section styling */
 .skills .title::after{
