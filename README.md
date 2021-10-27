@@ -1,3 +1,2 @@
-# ConorTansey.github.io
-Portfolio Website
+# Portfolio Website
 To view the website go to https://conortansey.github.io
