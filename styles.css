@@ -11,6 +11,8 @@ html{
     scroll-behavior: smooth;
 }
 
+
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -43,7 +45,6 @@ section{
 
 .about .about-content,
 .background .background-content,
-.skills .skills-content,
 .contact .contact-content
 .experience, .content{
     display: flex;
@@ -201,6 +202,7 @@ section .title::after{
     font-size: 75px; 
     font-weight: 600;
     margin-left: -3px;
+    
 }
 
 .home .home-content .text-3{
@@ -244,7 +246,8 @@ section .title::after{
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
-    transform: rotate(90deg);
+    image-orientation: from-image;
+    
 }
 .about .about-content .right{
     width: 55%; 
@@ -393,66 +396,45 @@ section .title::after{
     font-family: 'Ubuntu', sans-serif;  
 }
 
-
 /* skills section styling */
 .skills .title::after{
     content: "what i know ";
 }
 
-.skills .skills-content .column{
-    width: calc(50% - 30px);   
+.skills .skills-content{
+    display: stretch;
 }
 
-.skills .skills-content .left .text{
-    font-size: 20px;
+.skills .skills-content .column_left .text{
+    font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.skills .skills-content .left p {
-    text-align: justify;
-}
-
-.skills .skills-content .left a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-
-.skills .skills-content .left a:hover{
-    color: crimson;
-    background: none;
-
-}
-
-.skills .skills-content .right .bars{
+.skills .skills-content .column_right .bars{
     margin-bottom: 15px;
 } 
 
-.skills .skills-content .right .info{
+.skills .skills-content .column_right .info{
     display: flex;
     margin-bottom: 5px;
     align-items: center;
     justify-content: space-between; 
 }
-.skills .skills-content .right span{
-    font-weight: 500;
+
+.skills .skills-content .column_right span{
+    font-weight: 800;
     font-size: 18px; 
 }
-.skills .skills-content .right .line{
+
+.skills .skills-content .column_right .line{
     height: 5px;
     width: 100%;
     background: lightgrey;
     position: relative;     
 }
-.skills .skills-content .right .line::before{
+
+.skills .skills-content .column_right .line::before{
     content: "";
     position: absolute;
     height: 100%;
@@ -460,25 +442,40 @@ section .title::after{
     top: 0; 
     background: crimson;
 } 
-.skills-content .right .html::before{
+
+.skills-content .column_right .python::before{
     width: 90%;
 }
-.skills-content .right .css::before{
+.skills-content .column_right .java::before{
     width: 80%;
 }
-.skills-content .right .js::before{
+.skills-content .column_right .c::before{
     width: 80%;
 }
-.skills-content .right .php::before{
+.skills-content .column_right .mysql::before{
     width: 70%;
 }
-.skills-content .right .mysql::before{
+.skills-content .column_right .htmlcssjs::before{
     width: 60%;
 } 
 
+.skills .max-width .skills-content .column_left .text{
+    font-family: 'Poppins', sans-serif;
+}
 
+.skills .max-width .skills-content .column_left li{
+    font-family: 'Poppins', sans-serif;;
+    font-size: large;
+    font-weight: 500;
+}
 
+.skills .max-width .skills-content .column_right .bars span{
+    font-family: 'Poppins', sans-serif;;
+}
 
+.skills .skills-content .column_right{
+    margin-bottom: 50px;;
+}
 
 /*contact section styling*/
 .contact .title::after{
@@ -492,11 +489,6 @@ section .title::after{
 .contact .max-width .contact-content .icons{
     position: center;
 }
-
-.contact .max-width .contact-content{
-    
-}
-
 
 /* responsive media query start */
 @media(max-width: 1104px){
@@ -598,9 +590,6 @@ section .title::after{
         font-size: 20px;
         padding: 9px 25px;
     }
-    .services .serv-content .card{
-        width: 100%;
-    }
 }
 
 @media (max-width: 500px){
@@ -611,4 +600,4 @@ section .title::after{
     .home .home-content .text-3{
         font-size: 27px;
     }
-}
+}}
